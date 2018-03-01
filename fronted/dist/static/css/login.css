@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.container{
+    
+    margin: auto;
+    margin-top: 150px;
+    border:1px solid white;
+    width: 300px;
+    box-shadow: darkgrey 10px 10px 30px 5px ;
+}
+.choices{
+    height: 38px;
+    line-height: 38px;
+}
+.choice{
+    display: inline-block;
+    width: 130px;
+    margin-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    color: green;
+}
+.choiceItems{
+    margin-top: 15px;
+    
+    
+}
+input{
+    display: block;
+    margin-top: 15px;
+    width: 213px;
+    height: 25px;
+}
+span{
+    font-size: 12px;
+    color: red;
+   
+}
+
+.choiceItem{
+    position: relative;
+    margin: 0 auto;
+    left:30px;
+    height: 155px;
+    
+}
+button{
+    display: block;
+    margin: 10px;
+    width:75px;
+    height: 35px;
+    background-color: seagreen;
+    border: none;
+    color: snow;
+    font-size: 18px;
+    border-radius: 5px;
+    position: absolute;
+    left: 52px;
+}
+
+.registerItem{ 
+    display: none;
+    height: 260px;
+}
+.mail{
+    margin-top: 0px;
+}
+
+.alert{
+    visibility: hidden;
+    
+}
+

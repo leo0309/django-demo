@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/home.css">
+{% endblock css %}
+
+{% block navigation %}
+<div class="nav">
+    <div class="home"><span>{{owner.username}}的主页</span></div>
+    <div class="loginUser">
+    {% if user is None %}
+    <a href="/">注册/登录</a>
+    {% else %}
+    <a href="/home/{{user.username}}/">{{user.username}}</a>
+    <span>/</span>
+    <a href="/api/logout/">注销</a>
+    {% endif %}
+    </div>
+</div>
+{% endblock navigation %}
+
+{% block tweetPost %}
+{% if user.id == owner.id %}
+    <div class="tweetPost">
+        <input type="text" class="tweetArea" placeholder="说些什么吧.....">
+        <i><input type="file" class="tweetImg" ></i>
+        <button id="tweetSend">提交</button>
+    </div>
+{% else %}
+{% endif %}
+{% endblock tweetPost %}
+
+{% block tweetdisplay %}
+{% verbatim %}
+<div class="tweetcontainer">
+    <div id="display">
+        <ul>
+            <li v-for=" tweet in tweets" class="tweetli">
+                <div v-bind:id="tweet.pk"> 
+                    <div  class="tweetContent">
+                        {{tweet.fields.content}}
+                        <img v-if="tweet.fields.imgshow" v-bind:src="/media/+tweet.fields.img" >
+                    </div>
+                    <span>创建于{{tweet.fields.create_date}}</span>
+                    <div class="tweetComment"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+{% endverbatim %}
+{% endblock tweetdisplay %}
+{% block js %}
+
+<script src="/static/js/vue2.5.js"></script>
+<script src="/static/js/home.js"></script>
+<!--<script src="/static/js/tweetdisplay.js"></script>-->
+{% endblock js %}

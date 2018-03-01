@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tweet</title>
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="choices" >
+            <a class="choice" href="#">登录</a>
+            <a class="choice" href="#">注册</a>
+        </div>
+        <div class="choiceItems">
+            <div class="choiceItem loginItem">
+                <input type="text" name="loginId" placeholder="用户名/email">
+                <input type="password" name="password" placeholder="密码">
+                <span class="alert">输入的口令或者密码不正确</span>
+                <button id="login">登录</button>
+            </div>
+            <div class="choiceItem registerItem">
+                <input type="text" name="username" placeholder="用户名">
+                <span class="alert user">该用户名已存在</span>
+                <input type="email" class="mail" name="email" placeholder="邮箱">
+                <input type="password" name="password" placeholder="密码">
+                <input type="password" name="password2" placeholder="再输入一次密码">
+                <span class="alert psw">密码必须大于6位</span>
+                <button id="register">注册</button>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/login.js"></script>
+    <!--<script src="static/js/md5.js"></script>-->
+    <script src="static/js/js.cookie.js"></script>
+</body>
+</html>
