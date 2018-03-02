@@ -10,3 +10,5 @@
 
 如果没有错误，最后运行python manage.py runserver, django会默认监听8000端口，在浏览器中输入127.0.0.1:8000即可进入登入页面。
 
+演示效果：
+![演示效果](https://github.com/leo0309/django-demo/blob/master/newdemo.gif)
